@@ -1,0 +1,55 @@
+version: "3.1"
+
+stories:
+
+- story: Asking questions
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask
+  - action: utter_answer
+
+
+- story: payments
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: payment_options
+  - action: utter_info
+  - action: utter_info
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_thankyou
+  - intent: deny
+  - action: utter_goodbye
+
+- story: returns
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: return_policies
+  - action: utter_info
+  - action: utter_info
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+  - intent: affirm
+  - action: utter_thankyou
+
+- story: customer 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: customer_satisfaction
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_thankyou
+
+- story: other
+  steps:
+    - intent: other_queries
+    - action: utter_other
+    - intent: deny
+    - action: utter_goodbye
+    - intent: goodbye
+    - action: utter_goodbye

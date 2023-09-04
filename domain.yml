@@ -1,0 +1,67 @@
+version: "3.1"
+
+intents:
+  - greet
+  - ask
+  - payment_options
+  - return_policies
+  - other_queries
+  - customer_satisfaction
+  - affirm
+  - deny
+  - goodbye
+  - bot_challenge
+
+responses:
+  utter_greet:
+  - text: "Hey!"
+  - text: "Hello!"
+  - text: "Hii!"
+
+
+  utter_help:
+  - text: "How can I help"
+  - text: "What do you want to know?"
+  - text: "Type in your query"
+
+  utter_info:
+  - text: "you can return and get full refund"
+  - text: "showing all ways"
+  - text: " Let me show you all the payment options"
+  - text: "want to know about refund conditions?"
+  - text: " Why return?"
+  - text: "do_you_want_to_see_your_offers?"
+
+  utter_answer:
+  - text: " This is the best platform when looking for high quality beverages"
+  - text: " The best brand is Lipton"
+  - text: " Green tea has the highest nutritional value"
+
+  utter_other:
+  - text: " the price is 200 rupees"
+  - text: " yes available"
+  - text: " Available in pouches and bottles"
+  - text: " We have a variety of flavours"
+  - text: " we have herbal options too"
+  utter_satisfaction:
+  - text: "Are you satisfied?"
+
+
+  utter_thankyou:
+  - text: "Thank you!"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

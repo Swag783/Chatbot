@@ -1,0 +1,104 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - goodafternoon
+
+- intent: affirm
+  examples: |
+    - yes
+    - Y
+    - yeah
+    - yes that did
+    - it was great
+    - that was a great help
+
+- intent: deny
+  examples: |
+    - No
+    - n
+    - nope
+    - no that did not help
+    - asked something else
+    - unexpected answers
+
+- intent: ask
+  examples: |
+    - Know about
+    - find out
+    - see if
+    - is there
+    - What brand is best in beverages?
+    - Tell me about yur preferences
+    - Which is the best tea brand?
+    - Which brand has the highest nutritional value?
+
+- intent: payment_options
+  examples: |
+    - pay
+    - offers
+    - coupons
+    - payment options?
+    - credit card
+    - debit card
+    - online payment platforms
+    - Google Pay
+    - Paytm
+
+- intent: return_policies
+  examples: |
+    - is return possible?
+    - damaged product
+    - how many days to return?
+    - instant refund?
+    - did not receive exact product
+    - return condidtions?
+
+- intent: other_queries
+  examples: |
+    - tell the price
+    - is tata tea available in bigger quantity?
+    - better packaging
+    - flavour options
+    - alternates?
+
+
+- intent: customer_satisfaction
+  examples: |
+    - How was your buying experience?
+    - amazing product
+    - overall experience was not good
+    - very bad
+    - untimed delivery
+    - unexpected product
+    - good quality
+    - Did the return policy find you well?
+    - Were you satisfied with the product received?
+    - Did my responses help?
+    - How much would you rate me on a scale of 5
+
+- intent: goodbye
+  examples: |
+    - bye
+    - bye-bye
+    - let me leave
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?

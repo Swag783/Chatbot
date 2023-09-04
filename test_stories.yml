@@ -1,0 +1,92 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+stories:
+- story: ask 1
+  steps:
+  - user: |
+      hi
+    intent: greet
+  - action: utter_greet
+  - user: |
+      What brand is best in beverages?
+    intent: ask
+  - action: utter_info
+
+- story: customer
+  steps:
+  - user: |
+      hello there!
+    intent: greet
+  - action: utter_greet
+  - user: |
+      amazing product
+    intent: customer_satisfaction
+  - action: utter_satisfaction
+  - user: |
+      yes
+    intent: affirm
+  - action: utter_thankyou
+
+
+- story: return
+  steps:
+  - user: |
+      hello
+    intent: greet
+  - action: utter_greet
+  - user: |
+      I received damaged product
+    intent: return_policies
+  - action: utter_info
+  - action: utter_did_that_help
+  - user: |
+      yes
+    intent: affirm
+  - action: utter_thankyou
+
+- story: payment 1
+  steps:
+  - user: |
+      hello
+    intent: greet
+  - action: utter_greet
+  - user: |
+       How can I use my coupons
+    intent: payment_options
+  - action: utter_info
+  - action: utter_did_that_help
+  - user: |
+      yes
+    intent: affirm
+  - action: utter_thankyou
+
+- story: payment 2
+  steps:
+  - user: |
+      hi
+    intent: greet
+  - action: utter_greet
+  - user: |
+      pay
+    intent: payment_options
+  - action: utter_info
+  - action: utter_did_that_help
+  - user: |
+      no
+    intent: deny
+  - action: utter_goodbye
+
+- story: say goodbye
+  steps:
+  - user: |
+      bye-bye!
+    intent: goodbye
+  - action: utter_goodbye
+
+- story: bot challenge
+  steps:
+  - user: |
+      are you a bot?
+    intent: bot_challenge
+  - action: utter_iamabot
